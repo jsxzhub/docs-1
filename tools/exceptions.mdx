@@ -76,8 +76,9 @@ from agno.agent import Agent
 from agno.exceptions import StopAgentRun
 from agno.models.openai import OpenAIResponses
 from agno.run import RunContext
+from agno.tools import tool
 
-
+@tool
 def check_condition(run_context: RunContext, value: int) -> str:
     """Check a condition and stop tool calls if met."""
     if value > 100:
